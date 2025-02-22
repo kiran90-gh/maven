@@ -1,9 +1,9 @@
 pipeline {
    tools{
-      jdk 'JAVA_HOME_WIN'
-	  maven 'M2_HOME_WIN'
+      jdk 'JAVA_HOME_L'
+	  maven 'M2_HOME_L'
 	  }
-    agent { label 'winslave' }
+    agent { label 'linuxslv' }
 	
      stages{
         stage('git checkout') {
@@ -14,17 +14,17 @@ pipeline {
         }
         stage('compile') {
             steps {
-                bat 'mvn compile'
+                sh 'mvn compile'
             }
         }
         stage('test') {
             steps {
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
         stage('package') {
             steps {
-                bat 'mvn package'
+                sh 'mvn package'
             }
         }
     }
