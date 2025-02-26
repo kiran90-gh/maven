@@ -1,9 +1,9 @@
 pipeline {
    tools{
-      jdk 'JAVA_HOME_L'
-	  maven 'M2_HOME_L'
+      jdk 'JAVA_HOME'
+	  maven 'M2_HOME'
 	  }
-    agent { label 'linuxslv' }
+    agent any
 	
      stages{
         stage('git checkout') {
