@@ -14,7 +14,7 @@ steps{
 
 
 }
-stage ('upload file into s3 bucket')
+stage ('upload file into bucket-2')
 {
 steps{
   script{
