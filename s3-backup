@@ -25,3 +25,4 @@ s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitFo
 
 }
 }
+}
